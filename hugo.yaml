@@ -22,33 +22,9 @@ markup:
     renderer:
       unsafe: true
 
-Menus:
-  main:
-    - identifier: about
-      name: About
-      title: About
-      url: /#about
-      weight: 1
-    - identifier: experience
-      name: Experience
-      title: Experience
-      url: /#experience
-      weight: 2
-    - identifier: education
-      name: Education
-      title: Education
-      url: /#education
-      weight: 3
-    - identifier: projects
-      name: Projects
-      title: Projects
-      url: /#projects
-      weight: 4
-    - identifier: publications
-      name: Publications
-      title: Publications
-      url: /#achievements
-      weight: 5
+# NOTE: the hugo-profile theme auto-generates the navbar from the enabled
+# sections below (About, Experience, Education, ...). Do NOT add a Menus.main
+# block with the same items or they render twice.
 
 params:
   title: "Muneeb ul Hassan"
@@ -114,7 +90,7 @@ params:
   about:
     enable: true
     title: "About Me"
-    image: "/images/me.png"
+    image: "/images/profile.jpg"
     content: |-
       I am a Data Scientist at Homiwoo (Paris), where I design, build, and deploy production machine learning systems for the real estate domain — from automated property valuation to energy-rating estimation and computer vision on listing photos.
 
