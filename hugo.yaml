@@ -194,7 +194,7 @@ params:
     items:
       - title: "Explainable Deep Learning"
         content: "Proposed an attribute-based technique to explain the classification decisions of deep neural networks for multimedia indexing and retrieval. Accepted at CBMI 2019 (IEEE)."
-        image: /images/projects/profile.png
+        image: /images/papers/cbmi2019.jpg
         badges:
           - "Python"
           - "PyTorch"
@@ -212,7 +212,7 @@ params:
           - "MLflow"
       - title: "Hyper-heuristic Deep Learning Optimization"
         content: "A hyper-heuristic approach to optimise deep-learning hyper-parameters for image classification. Published at ICCS 2018 (Springer, Rank A)."
-        image: /images/projects/converter.jpg
+        image: /images/papers/iccs2018.jpg
         badges:
           - "Python"
           - "Deep Learning"
@@ -236,11 +236,11 @@ params:
       - title: "Explaining Visual Classification Using Attributes"
         content: "M. ul Hassan, P. Mulhem, D. Pellerin, G. Quénot. In 2019 International Conference on Content-Based Multimedia Indexing (CBMI), IEEE, 2019."
         url: https://ieeexplore.ieee.org/document/8877393/
-        image: /images/achievement.jpg
+        image: /images/papers/cbmi2019.jpg
       - title: "Optimising Deep Learning by Hyper-heuristic Approach"
         content: "M. ul Hassan, N. R. Sabar, A. Song. International Conference on Computational Science (ICCS), pp. 528–539, Springer, 2018. (Rank A)"
         url: https://doi.org/10.1007/978-3-319-93701-4_41
-        image: /images/achievement.jpg
+        image: /images/papers/iccs2018.jpg
 
   # Contact
   contact:
