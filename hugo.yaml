@@ -192,41 +192,67 @@ params:
   projects:
     enable: true
     items:
-      - title: "Explainable Deep Learning"
-        content: "Proposed an attribute-based technique to explain the classification decisions of deep neural networks for multimedia indexing and retrieval. Accepted at CBMI 2019 (IEEE)."
-        image: /images/papers/cbmi2019.jpg
+      - title: "Image & Video Segmentation and Detection"
+        content: "Deep-learning experiments for semantic image/video segmentation and object detection in Python."
+        image: https://opengraph.githubassets.com/1/muneebable/Image-and-Video-Segmentation-Detection
         badges:
           - "Python"
-          - "PyTorch"
-          - "Explainable AI"
-        links:
-          - icon: fas fa-file-lines
-            url: https://ieeexplore.ieee.org/document/8877393/
-      - title: "Real-Estate Valuation & Energy Models"
-        content: "Production ML at Homiwoo: an attention-based Automated Valuation Model with conformal prediction intervals, and gradient-boosted DPE/GES energy-rating estimation with spatial neighbour features."
-        image: /images/projects/profile2.jpg
-        badges:
-          - "PyTorch Lightning"
-          - "XGBoost"
-          - "BentoML"
-          - "MLflow"
-      - title: "Hyper-heuristic Deep Learning Optimization"
-        content: "A hyper-heuristic approach to optimise deep-learning hyper-parameters for image classification. Published at ICCS 2018 (Springer, Rank A)."
-        image: /images/papers/iccs2018.jpg
-        badges:
-          - "Python"
+          - "Computer Vision"
           - "Deep Learning"
         links:
-          - icon: fas fa-file-lines
-            url: https://doi.org/10.1007/978-3-319-93701-4_41
-      # Add more of your recent projects here:
-      # - title: "My Project"
-      #   content: "Description."
-      #   image: /images/projects/profile.png
-      #   badges: ["Tag"]
-      #   links:
-      #     - icon: fab fa-github
-      #       url: https://github.com/muneebable/your-repo
+          - icon: fab fa-github
+            url: https://github.com/muneebable/Image-and-Video-Segmentation-Detection
+      - title: "Machine Learning"
+        content: "A collection of machine-learning practice notebooks and experiments on Kaggle and other datasets."
+        image: https://opengraph.githubassets.com/1/muneebable/MachineLearning
+        badges:
+          - "Python"
+          - "Jupyter"
+          - "Machine Learning"
+        links:
+          - icon: fab fa-github
+            url: https://github.com/muneebable/MachineLearning
+      - title: "GDELT Data Analysis using MapReduce"
+        content: "Large-scale analysis of the GDELT global-events dataset on AWS using Hadoop MapReduce, extracting worldwide protest trends from 1979–2016."
+        image: https://opengraph.githubassets.com/1/muneebable/GDELT-Data-Analysis-using-MapReduce
+        badges:
+          - "Java"
+          - "Hadoop"
+          - "MapReduce"
+          - "AWS"
+        links:
+          - icon: fab fa-github
+            url: https://github.com/muneebable/GDELT-Data-Analysis-using-MapReduce
+      - title: "Earthquake Early-Warning System"
+        content: "Prototype device that reads seismic-wave signals to trigger an early-warning alarm, transmitting sensor data to a server over an RF module."
+        image: https://opengraph.githubassets.com/1/muneebable/Earthquake-Early-Warning-System
+        badges:
+          - "C"
+          - "IoT"
+          - "Signal Processing"
+        links:
+          - icon: fab fa-github
+            url: https://github.com/muneebable/Earthquake-Early-Warning-System
+      - title: "Small Microservice"
+        content: "A demonstration microservice built with Spring Boot and Eureka service discovery."
+        image: https://opengraph.githubassets.com/1/muneebable/Small-Microservice
+        badges:
+          - "Java"
+          - "Spring Boot"
+          - "Microservices"
+        links:
+          - icon: fab fa-github
+            url: https://github.com/muneebable/Small-Microservice
+      - title: "MongoDB Experiment & WMI"
+        content: "Java service with simple authentication that parses and stores data in MongoDB, plus utilities to collect Windows WMI data."
+        image: https://opengraph.githubassets.com/1/muneebable/MongoDb_Expertiment_And_WMI
+        badges:
+          - "Java"
+          - "MongoDB"
+          - "WMI"
+        links:
+          - icon: fab fa-github
+            url: https://github.com/muneebable/MongoDb_Expertiment_And_WMI
 
   # Achievements / Publications
   achievements:
