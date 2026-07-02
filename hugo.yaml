@@ -1,0 +1,310 @@
+baseURL: "https://muneebable.github.io/"
+languageCode: "en-us"
+title: "Muneeb ul Hassan"
+theme: hugo-profile
+
+outputs:
+  home:
+    - "HTML"
+    - "RSS"
+    - "JSON"
+  page:
+    - "HTML"
+    - "RSS"
+
+enableRobotsTXT: true
+
+pagination:
+  pagerSize: 3
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+
+Menus:
+  main:
+    - identifier: about
+      name: About
+      title: About
+      url: /#about
+      weight: 1
+    - identifier: experience
+      name: Experience
+      title: Experience
+      url: /#experience
+      weight: 2
+    - identifier: education
+      name: Education
+      title: Education
+      url: /#education
+      weight: 3
+    - identifier: projects
+      name: Projects
+      title: Projects
+      url: /#projects
+      weight: 4
+    - identifier: publications
+      name: Publications
+      title: Publications
+      url: /#achievements
+      weight: 5
+
+params:
+  title: "Muneeb ul Hassan"
+  description: "Data Scientist & Machine Learning Engineer — production ML for the real estate domain."
+  favicon: "/fav.png"
+  useBootstrapCDN: false
+  mathjax: false
+  animate: true
+
+  theme:
+    defaultTheme: "dark"
+
+  font:
+    fontSize: 1rem
+    fontWeight: 400
+    lineHeight: 1.5
+    textAlign: left
+
+  navbar:
+    align: ms-auto
+    brandName: "Muneeb ul Hassan"
+    disableSearch: true
+    stickyNavBar:
+      enable: true
+      showOnScrollUp: true
+    enableSeparator: false
+    menus:
+      disableAbout: false
+      disableExperience: false
+      disableEducation: false
+      disableProjects: false
+      disableAchievements: false
+      disableContact: false
+
+  # Hero
+  hero:
+    enable: true
+    intro: "Hi, my name is"
+    title: "Muneeb ul Hassan."
+    subtitle: "I build production machine learning systems."
+    content: "Data Scientist and ML Engineer with 5+ years of experience designing, building, and deploying production-grade machine learning systems — spanning property valuation, energy-rating estimation, and computer vision."
+    image: /images/hero.svg
+    bottomImage:
+      enable: true
+    button:
+      enable: true
+      name: "Resume"
+      url: "/CV_Muneeb.pdf"
+      download: true
+      newPage: true
+    socialLinks:
+      fontAwesomeIcons:
+        - icon: fab fa-github
+          url: https://github.com/muneebable
+        - icon: fab fa-linkedin
+          url: https://www.linkedin.com/in/muneeb--ul--hassan
+        - icon: fab fa-x-twitter
+          url: https://twitter.com/Muneebable
+        - icon: fas fa-graduation-cap
+          url: https://scholar.google.com/citations?user=xMl72TkAAAAJ&hl=en
+
+  # About
+  about:
+    enable: true
+    title: "About Me"
+    image: "/images/me.png"
+    content: |-
+      I am a Data Scientist at Homiwoo (Paris), where I design, build, and deploy production machine learning systems for the real estate domain — from automated property valuation to energy-rating estimation and computer vision on listing photos.
+
+      I enjoy owning the full ML lifecycle: framing the problem, engineering features, designing and training custom deep-learning and gradient-boosting models, quantifying prediction uncertainty, and shipping reliable, interpretable models to production through a modern MLOps stack.
+    skills:
+      enable: true
+      title: "A few technologies and tools I work with:"
+      items:
+        - "Python"
+        - "PyTorch / PyTorch Lightning"
+        - "XGBoost / LightGBM"
+        - "Scikit-learn"
+        - "TensorFlow"
+        - "MLflow"
+        - "BentoML"
+        - "Optuna"
+        - "Docker"
+        - "SQL"
+        - "Computer Vision"
+
+  # Experience
+  experience:
+    enable: true
+    items:
+      - company: "Homiwoo"
+        companyUrl: "https://homiwoo.com"
+        jobs:
+          - name: "Data Scientist"
+            date: "Sept 2019 - Present"
+            info:
+              content: "Production ML for real estate: valuation, energy ratings, and computer vision."
+            content: |
+              Designing, building, and deploying production machine learning systems for French real estate.
+
+              - Built the production **Automated Valuation Model (AVM)** — an attention-based comparable-sales neural network (PyTorch Lightning) that estimates property price as a learned, attention-weighted aggregate of comparable transactions and listings, with bounded per-comparable price adjustment for built-in interpretability.
+              - Designed the **uncertainty-estimation layer** using Conformalized Quantile Regression for calibrated prediction intervals and confidence scores derived from the model's internal signals.
+              - Developed the **DPE/GES energy-rating estimation service** — gradient-boosted models (XGBoost) with surface-aware conversion to the regulatory A–G class and a custom asymmetric loss.
+              - Engineered **spatial neighbour-based feature pipelines** using similarity-weighted aggregations of nearby properties' known ratings.
+              - Contributed to **Scan'Immo computer-vision research** (YOLOv5, OneFormer, DPT, LoFTR, CLIP) toward floor-plan reconstruction from photos.
+              - Built and operated the **ML infrastructure** — BentoML services, MLflow tracking/registry, and notebook-driven experimentation with A/B evaluation.
+      - company: "LIG Lab"
+        companyUrl: "https://www.liglab.fr/"
+        jobs:
+          - name: "Deep Learning Research Intern"
+            date: "Feb 2019 - June 2019"
+            content: |
+              Worked on Explainable Deep Learning for Multimedia Indexing and Retrieval and conducted a survey on Explainable AI. Proposed a technique to justify classification decisions; paper accepted at the CBMI 2019 conference.
+      - company: "Fujitsu"
+        companyUrl: "https://www.fujitsu.com/"
+        jobs:
+          - name: "Software Engineering Intern"
+            date: "Sept 2017 - Sept 2018"
+            content: |
+              Automated and optimized (TAO) QA server tests for low/mid/high-end Fujitsu PRIMERGY servers, implementing new functionality and bug fixes in Java/Python in an Agile (Scrum) environment.
+      - company: "RMIT University"
+        companyUrl: "https://www.rmit.edu.au/"
+        jobs:
+          - name: "Machine Learning Research Intern"
+            date: "Jan 2017 - June 2017"
+            content: |
+              Optimised deep-learning hyper-parameters using hyper-heuristics for image classification; published a paper at A-rank conference ICCS-2018.
+      - company: "CDC House"
+        jobs:
+          - name: "Software Engineer"
+            date: "Jan 2015 - May 2015"
+            content: |
+              Developed new functionalities, fixed bugs, and wrote data queries to enhance the production system per day-to-day requirements.
+
+  # Education
+  education:
+    enable: true
+    index: false
+    items:
+      - title: "Master of Informatics (Specialization in Data Science)"
+        school:
+          name: "ENSIMAG, Grenoble INP"
+          url: "https://ensimag.grenoble-inp.fr/"
+        date: "2018 - 2019"
+        content: |-
+          Machine Learning and Object Recognition, Advanced Learning Models, Probabilistic Data Mining, Distributed Optimization, High-Performance Computing, Information Retrieval.
+
+          Master Thesis: Explainable Deep Learning for Multimedia Indexing and Retrieval.
+      - title: "Master of Computer Science"
+        school:
+          name: "RMIT University"
+          url: "https://www.rmit.edu.au/"
+        date: "2016 - 2017"
+        content: |-
+          Data Science, Machine Learning Fundamentals, Predictive Models, Big Data Processing, Master Thesis.
+      - title: "B.E. in Computer and Information Systems Engineering"
+        school:
+          name: "NED University of Engineering and Technology"
+          url: "https://www.neduet.edu.pk/"
+        date: "2011 - 2014"
+        content: |-
+          Data Structures, Artificial Intelligence, Software Engineering, Databases, Object-Oriented Programming.
+
+  # Projects
+  projects:
+    enable: true
+    items:
+      - title: "Explainable Deep Learning"
+        content: "Proposed an attribute-based technique to explain the classification decisions of deep neural networks for multimedia indexing and retrieval. Accepted at CBMI 2019 (IEEE)."
+        image: /images/projects/profile.png
+        badges:
+          - "Python"
+          - "PyTorch"
+          - "Explainable AI"
+        links:
+          - icon: fas fa-file-lines
+            url: https://ieeexplore.ieee.org/document/8877393/
+      - title: "Real-Estate Valuation & Energy Models"
+        content: "Production ML at Homiwoo: an attention-based Automated Valuation Model with conformal prediction intervals, and gradient-boosted DPE/GES energy-rating estimation with spatial neighbour features."
+        image: /images/projects/profile2.jpg
+        badges:
+          - "PyTorch Lightning"
+          - "XGBoost"
+          - "BentoML"
+          - "MLflow"
+      - title: "Hyper-heuristic Deep Learning Optimization"
+        content: "A hyper-heuristic approach to optimise deep-learning hyper-parameters for image classification. Published at ICCS 2018 (Springer, Rank A)."
+        image: /images/projects/converter.jpg
+        badges:
+          - "Python"
+          - "Deep Learning"
+        links:
+          - icon: fas fa-file-lines
+            url: https://doi.org/10.1007/978-3-319-93701-4_41
+      # Add more of your recent projects here:
+      # - title: "My Project"
+      #   content: "Description."
+      #   image: /images/projects/profile.png
+      #   badges: ["Tag"]
+      #   links:
+      #     - icon: fab fa-github
+      #       url: https://github.com/muneebable/your-repo
+
+  # Achievements / Publications
+  achievements:
+    enable: true
+    title: "Publications & Achievements"
+    items:
+      - title: "Explaining Visual Classification Using Attributes"
+        content: "M. ul Hassan, P. Mulhem, D. Pellerin, G. Quénot. In 2019 International Conference on Content-Based Multimedia Indexing (CBMI), IEEE, 2019."
+        url: https://ieeexplore.ieee.org/document/8877393/
+        image: /images/achievement.jpg
+      - title: "Optimising Deep Learning by Hyper-heuristic Approach"
+        content: "M. ul Hassan, N. R. Sabar, A. Song. International Conference on Computational Science (ICCS), pp. 528–539, Springer, 2018. (Rank A)"
+        url: https://doi.org/10.1007/978-3-319-93701-4_41
+        image: /images/achievement.jpg
+
+  # Contact
+  contact:
+    enable: true
+    content: "My inbox is always open. Whether you have a question or just want to say hi, I’ll do my best to get back to you!"
+    btnName: "Mail me"
+    btnLink: "mailto:muneeb_hassan@outlook.com"
+
+  footer:
+    recentPosts:
+      path: "blogs"
+      count: 3
+      title: Recent Posts
+      enable: false
+      disableFeaturedImage: false
+    socialNetworks:
+      github: https://github.com/muneebable
+      linkedin: https://www.linkedin.com/in/muneeb--ul--hassan
+      twitter: https://twitter.com/Muneebable
+
+  listPages:
+    disableFeaturedImage: false
+
+  singlePages:
+    socialShare: true
+    readTime:
+      enable: true
+      content: "min read"
+    scrollprogress:
+      enable: true
+    tags:
+      openInNewTab: true
+
+  terms:
+    read: "Read"
+    toc: "Table Of Contents"
+    copyright: "All rights reserved"
+    emailText: "Check out this site"
+
+  datesFormat:
+    article: "Jan 2, 2006"
+    articleList: "Jan 2, 2006"
+    articleRecent: "Jan 2, 2006"
