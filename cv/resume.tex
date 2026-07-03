@@ -1,108 +1,89 @@
 %!TEX TS-program = xelatex
 %!TEX encoding = UTF-8 Unicode
-% Awesome CV LaTeX Template for CV/Resume
-%
-% This template has been downloaded from:
-% https://github.com/posquit0/Awesome-CV
-%
-% Author:
-% Claud D. Park <posquit0.bj@gmail.com>
-% http://www.posquit0.com
-%
-% Template license:
-% CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/)
-%
-
+% One-page resume for Muneeb ul Hassan, built on the Awesome-CV template.
+% Content lives in the resume/ folder (kept separate from the full CV in cv/).
 
 %-------------------------------------------------------------------------------
 % CONFIGURATIONS
 %-------------------------------------------------------------------------------
-% A4 paper size by default, use 'letterpaper' for US letter
-\documentclass[11pt, a4paper]{awesome-cv}
+\documentclass[10pt, a4paper]{awesome-cv}
 
-% Configure page margins with geometry
-\geometry{left=1.4cm, top=.8cm, right=1.4cm, bottom=1.8cm, footskip=.5cm}
+% Tight margins so everything fits on a single page.
+\geometry{left=1.4cm, top=1.0cm, right=1.4cm, bottom=1.2cm, footskip=.5cm}
 
 % Specify the location of the included fonts
 \fontdir[fonts/]
 
-% Color for highlights
-% Awesome Colors: awesome-emerald, awesome-skyblue, awesome-red, awesome-pink, awesome-orange
-%                 awesome-nephritis, awesome-concrete, awesome-darknight
+% Highlight colour
 \colorlet{awesome}{awesome-red}
-% Uncomment if you would like to specify your own color
-% \definecolor{awesome}{HTML}{CA63A8}
 
-% Colors for text
-% Uncomment if you would like to specify your own color
-% \definecolor{darktext}{HTML}{414141}
-% \definecolor{text}{HTML}{333333}
-% \definecolor{graytext}{HTML}{5D5D5D}
-% \definecolor{lighttext}{HTML}{999999}
+% Colours for text — pure black body/name/dates (matches the full CV).
+\definecolor{darktext}{HTML}{000000}
+\definecolor{text}{HTML}{000000}
+\definecolor{graytext}{HTML}{000000}
+\definecolor{lighttext}{HTML}{3D3D3D}
 
-% Set false if you don't want to highlight section with awesome color
 \setbool{acvSectionColorHighlight}{true}
-
-% If you would like to change the social information separator from a pipe (|) to something else
 \renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
 
+% Compact, black styling to fit one page.
 \makeatletter
-\patchcmd{\@sectioncolor}{\color}{\mdseries\color}{}{}
+\renewcommand*{\sectionstyle}[1]{{\fontsize{12pt}{1em}\bodyfont\bfseries\color{text}\@sectioncolor #1}}
+\renewcommand*{\descriptionstyle}[1]{{\fontsize{9pt}{1.05em}\bodyfont\upshape\color{black} #1}}
+\renewcommand*{\skillsetstyle}[1]{{\fontsize{9pt}{1.1em}\bodyfont\color{black} #1}}
+\renewcommand*{\skilltypestyle}[1]{{\fontsize{9.5pt}{1em}\bodyfont\bfseries\color{black} #1}}
+\renewcommand*{\entrytitlestyle}[1]{{\fontsize{10pt}{1em}\bodyfont\bfseries\color{black} #1}}
+\renewcommand*{\entrypositionstyle}[1]{{\fontsize{8.5pt}{1em}\bodyfont\scshape\color{black} #1}}
+\renewcommand*{\entrydatestyle}[1]{{\fontsize{8.5pt}{1em}\bodyfontlight\slshape\color{black} #1}}
+\renewcommand*{\entrylocationstyle}[1]{{\fontsize{9pt}{1em}\bodyfontlight\slshape\color{awesome} #1}}
+\renewcommand{\acvSectionTopSkip}{3.5mm}
+\renewcommand{\acvSectionContentTopSkip}{2.5mm}
+\linespread{1.0}
+\renewenvironment{cvitems}{%
+  \vspace{-3.0mm}
+  \begin{justify}
+  \begin{itemize}[leftmargin=2ex, itemsep=0.2mm, parsep=0pt, topsep=0pt]
+    \renewcommand{\labelitemi}{\bullet}
+}{%
+  \end{itemize}
+  \end{justify}
+  \vspace{-3.5mm}
+}
 \makeatother
 
 %-------------------------------------------------------------------------------
 %	PERSONAL INFORMATION
-%	Comment any of the lines below if they are not required
 %-------------------------------------------------------------------------------
-% Available options: circle|rectangle,edge/noedge,left/right
-% \photo[rectangle,edge,right]{profile}
 \name{Muneeb ul}{Hassan}
-\position{Research Intern{\enskip\cdotp\enskip}Data Scientist}
-\address{Grenoble, France}
+\position{Data Scientist{\enskip\cdotp\enskip}Machine Learning Engineer}
+\address{Paris, France}
 
-\mobile{(+82) 10-9030-1843}
+\mobile{+337 66 58 53 63}
 \email{muneeb\_hassan@outlook.com}
-%\homepage{www.posquit0.com}
-\github{muneeb699}
+\homepage{muneebable.github.io}
+\github{muneebable}
 \linkedin{Muneeb--ul--Hassan}
-% \gitlab{gitlab-id}
-% \stackoverflow{SO-id}{SO-name}
-% \twitter{@twit}
-% \skype{skype-id}
-% \reddit{reddit-id}
-% \extrainfo{extra informations}
-
-\quote{``Be the change that you want to see in the world."}
 
 
 %-------------------------------------------------------------------------------
 \begin{document}
 
-% Print the header with above personal informations
-% Give optional argument to change alignment(C: center, L: left, R: right)
+% Centred header, no quote (kept compact for a one-page resume).
 \makecvheader[C]
 
-% Print the footer with 3 arguments(<left>, <center>, <right>)
-% Leave any of these blank if they are not needed
 \makecvfooter
   {\today}
-  {Claud D. Park~~~·~~~Résumé}
+  {Muneeb ul Hassan~~~·~~~Résumé}
   {\thepage}
 
 
 %-------------------------------------------------------------------------------
-%	CV/RESUME CONTENT
-%	Each section is imported separately, open each file in turn to modify content
+%	RESUME CONTENT
 %-------------------------------------------------------------------------------
 \input{resume/summary.tex}
 \input{resume/experience.tex}
-\input{resume/honors.tex}
-\input{resume/presentation.tex}
-\input{resume/writing.tex}
-\input{resume/committees.tex}
+\input{resume/skills.tex}
 \input{resume/education.tex}
-\input{resume/extracurricular.tex}
-
-
+\input{resume/languages.tex}
 %-------------------------------------------------------------------------------
 \end{document}

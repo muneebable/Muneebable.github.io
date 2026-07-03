@@ -18,10 +18,10 @@
 % CONFIGURATIONS
 %-------------------------------------------------------------------------------
 % A4 paper size by default, use 'letterpaper' for US letter
-\documentclass[11pt, a4paper]{awesome-cv}
+\documentclass[12pt, a4paper]{awesome-cv}
 
 % Configure page margins with geometry
-\geometry{left=1.4cm, top=.8cm, right=1.4cm, bottom=1.8cm, footskip=.5cm}
+\geometry{left=1.4cm, top=1.6cm, right=1.4cm, bottom=1.8cm, footskip=.5cm}
 
 % Specify the location of the included fonts
 \fontdir[fonts/]
@@ -48,7 +48,36 @@
 
 % Make section headings (Experience, Education, ...) a little smaller
 \makeatletter
-\renewcommand*{\sectionstyle}[1]{{\fontsize{13pt}{1em}\bodyfont\bfseries\color{text}\@sectioncolor #1}}
+\renewcommand*{\sectionstyle}[1]{{\fontsize{15pt}{1em}\bodyfont\bfseries\color{text}\@sectioncolor #1}}
+% Render body/description text in the regular weight and pure black so it
+% reads as solid black rather than a faint light-weight gray.
+% Sizes bumped ~+2.5pt across the board for a larger, more readable CV.
+\renewcommand*{\descriptionstyle}[1]{{\fontsize{11.5pt}{1.2em}\bodyfont\upshape\color{black} #1}}
+\renewcommand*{\subdescriptionstyle}[1]{{\fontsize{10.5pt}{1.2em}\bodyfont\upshape\color{black} #1}}
+\renewcommand*{\skillsetstyle}[1]{{\fontsize{11.5pt}{1.3em}\bodyfont\color{black} #1}}
+% Entry title / company / date / location and skill labels, bumped to match.
+\renewcommand*{\entrytitlestyle}[1]{{\fontsize{12.5pt}{1em}\bodyfont\bfseries\color{black} #1}}
+\renewcommand*{\entrypositionstyle}[1]{{\fontsize{10.5pt}{1em}\bodyfont\scshape\color{black} #1}}
+\renewcommand*{\entrydatestyle}[1]{{\fontsize{10.5pt}{1em}\bodyfontlight\slshape\color{black} #1}}
+\renewcommand*{\entrylocationstyle}[1]{{\fontsize{11.5pt}{1em}\bodyfontlight\slshape\color{awesome} #1}}
+\renewcommand*{\skilltypestyle}[1]{{\fontsize{12.5pt}{1em}\bodyfont\bfseries\color{black} #1}}
+
+% --- Spread content evenly across two full pages ---
+% Rely mainly on a slightly larger font (12pt above); keep spacing modest.
+\renewcommand{\acvSectionTopSkip}{7mm}
+\renewcommand{\acvSectionContentTopSkip}{3mm}
+\linespread{1.0}
+% A touch of breathing room between bullet items within an entry.
+\renewenvironment{cvitems}{%
+  \vspace{-3.0mm}
+  \begin{justify}
+  \begin{itemize}[leftmargin=2ex, itemsep=0.2mm, parsep=0pt, topsep=0pt]
+    \renewcommand{\labelitemi}{\bullet}
+}{%
+  \end{itemize}
+  \end{justify}
+  \vspace{-3.8mm}
+}
 \makeatother
 
 % Awesome-CV has no \cvitem (it is a moderncv command); define a full-width,
@@ -73,7 +102,7 @@
 
 \mobile{+337 66 58 53 63}
 \email{muneeb\_hassan@outlook.com}
-%\homepage{www.posquit0.com}
+\homepage{muneebable.github.io}
 \github{muneebable}
 \linkedin{Muneeb--ul--Hassan}
 % \gitlab{gitlab-id}
@@ -107,9 +136,10 @@
 %-------------------------------------------------------------------------------
 %\input{cv/summary.tex}
 \input{cv/experience.tex}
+\input{cv/skills.tex}
 \input{cv/education.tex}
 %\input{cv/projects.tex}
-\input{cv/skills.tex}
+
 %\input{cv/honors.tex}
 %\input{cv/presentation.tex}
 \input{cv/publications.tex}

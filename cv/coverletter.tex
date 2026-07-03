@@ -1,112 +1,70 @@
 %!TEX TS-program = xelatex
 %!TEX encoding = UTF-8 Unicode
-% Awesome CV LaTeX Template for Cover Letter
-%
-% This template has been downloaded from:
-% https://github.com/posquit0/Awesome-CV
-%
-% Authors:
-% Claud D. Park <posquit0.bj@gmail.com>
-% Lars Richter <mail@ayeks.de>
-%
-% Template license:
-% CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/)
-%
-
+% Generic cover letter for Muneeb ul Hassan, built on the Awesome-CV template.
+% Fill in the \recipient / \lettertitle / \letteropening fields per application.
 
 %-------------------------------------------------------------------------------
 % CONFIGURATIONS
 %-------------------------------------------------------------------------------
-% A4 paper size by default, use 'letterpaper' for US letter
 \documentclass[11pt, a4paper]{awesome-cv}
 
-% Configure page margins with geometry
-\geometry{left=1.4cm, top=.8cm, right=1.4cm, bottom=1.8cm, footskip=.5cm}
+\geometry{left=1.4cm, top=1.6cm, right=1.4cm, bottom=1.8cm, footskip=.5cm}
 
-% Specify the location of the included fonts
 \fontdir[fonts/]
 
-% Color for highlights
-% Awesome Colors: awesome-emerald, awesome-skyblue, awesome-red, awesome-pink, awesome-orange
-%                 awesome-nephritis, awesome-concrete, awesome-darknight
 \colorlet{awesome}{awesome-red}
-% Uncomment if you would like to specify your own color
-% \definecolor{awesome}{HTML}{CA63A8}
 
-% Colors for text
-% Uncomment if you would like to specify your own color
-% \definecolor{darktext}{HTML}{414141}
-% \definecolor{text}{HTML}{333333}
-% \definecolor{graytext}{HTML}{5D5D5D}
-% \definecolor{lighttext}{HTML}{999999}
+% Pure black text (matches the CV/resume).
+\definecolor{darktext}{HTML}{000000}
+\definecolor{text}{HTML}{000000}
+\definecolor{graytext}{HTML}{000000}
+\definecolor{lighttext}{HTML}{3D3D3D}
 
-% Set false if you don't want to highlight section with awesome color
 \setbool{acvSectionColorHighlight}{true}
-
-% If you would like to change the social information separator from a pipe (|) to something else
 \renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
 
+% Black letter body text.
+\makeatletter
+\renewcommand*{\lettertextstyle}{\fontsize{10pt}{1.4em}\bodyfont\upshape\color{black}}
+\makeatother
 
 %-------------------------------------------------------------------------------
 %	PERSONAL INFORMATION
-%	Comment any of the lines below if they are not required
 %-------------------------------------------------------------------------------
-% Available options: circle|rectangle,edge/noedge,left/right
-\photo[circle,noedge,left]{profile}
-\name{Claud D.}{Park}
-\position{Software Engineer{\enskip\cdotp\enskip}Security Expert}
-\address{246-1002, Gwangmyeongmayrouge Apt. 86, Cheongna lime-ro, Seo-gu, Incheon-si, 404-180, Rep. of KOREA}
+\name{Muneeb ul}{Hassan}
+\position{Data Scientist{\enskip\cdotp\enskip}Machine Learning Engineer}
+\address{Paris, France}
 
-\mobile{(+82) 10-9030-1843}
-\email{posquit0.bj@gmail.com}
-\homepage{www.posquit0.com}
-\github{posquit0}
-\linkedin{posquit0}
-% \gitlab{gitlab-id}
-% \stackoverflow{SO-id}{SO-name}
-% \twitter{@twit}
-% \skype{skype-id}
-% \reddit{reddit-id}
-% \extrainfo{extra informations}
-
-\quote{``Be the change that you want to see in the world. Now!"}
+\mobile{+337 66 58 53 63}
+\email{muneeb\_hassan@outlook.com}
+\homepage{muneebable.github.io}
+\github{muneebable}
+\linkedin{Muneeb--ul--Hassan}
 
 
 %-------------------------------------------------------------------------------
-%	LETTER INFORMATION
-%	All of the below lines must be filled out
+%	LETTER INFORMATION  (customise these three per application)
 %-------------------------------------------------------------------------------
-% The company being applied to
 \recipient
-  {Company Recruitment Team}
-  {Google Inc.\\1600 Amphitheatre Parkway\\Mountain View, CA 94043}
-% The date on the letter, default is the date of compilation
+  {Hiring Team}
+  {[Company Name]\\{}[Company Address]}
 \letterdate{\today}
-% The title of the letter
-\lettertitle{Job Application for Software Engineer}
-% How the letter is opened
-\letteropening{Dear Mr./Ms./Dr. LastName,}
-% How the letter is closed
+\lettertitle{Application for the Data Scientist / Machine Learning Engineer role}
+\letteropening{Dear Hiring Team,}
 \letterclosing{Sincerely,}
-% Any enclosures with the letter
 \letterenclosure[Attached]{Curriculum Vitae}
 
 
 %-------------------------------------------------------------------------------
 \begin{document}
 
-% Print the header with above personal informations
-% Give optional argument to change alignment(C: center, L: left, R: right)
 \makecvheader[R]
 
-% Print the footer with 3 arguments(<left>, <center>, <right>)
-% Leave any of these blank if they are not needed
 \makecvfooter
   {\today}
-  {Claud D. Park~~~·~~~Cover Letter}
+  {Muneeb ul Hassan~~~·~~~Cover Letter}
   {}
 
-% Print the title with above letter informations
 \makelettertitle
 
 %-------------------------------------------------------------------------------
@@ -114,20 +72,20 @@
 %-------------------------------------------------------------------------------
 \begin{cvletter}
 
-\lettersection{About Me}
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ullamcorper neque sit amet lectus facilisis sed luctus nisl iaculis. Vivamus at neque arcu, sed tempor quam. Curabitur pharetra tincidunt tincidunt. Morbi volutpat feugiat mauris, quis tempor neque vehicula volutpat. Duis tristique justo vel massa fermentum accumsan. Mauris ante elit, feugiat vestibulum tempor eget, eleifend ac ipsum. Donec scelerisque lobortis ipsum eu vestibulum. Pellentesque vel massa at felis accumsan rhoncus.
+I am writing to express my interest in joining your team as a Data Scientist / Machine Learning Engineer. With over seven years of experience designing, building, and deploying production-grade machine learning systems, I am excited by the opportunity to help your organisation turn data into reliable, high-impact products.
 
-\lettersection{Why Google?}
-Suspendisse commodo, massa eu congue tincidunt, elit mauris pellentesque orci, cursus tempor odio nisl euismod augue. Aliquam adipiscing nibh ut odio sodales et pulvinar tortor laoreet. Mauris a accumsan ligula. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse vulputate sem vehicula ipsum varius nec tempus dui dapibus. Phasellus et est urna, ut auctor erat. Sed tincidunt odio id odio aliquam mattis. Donec sapien nulla, feugiat eget adipiscing sit amet, lacinia ut dolor. Phasellus tincidunt, leo a fringilla consectetur, felis diam aliquam urna, vitae aliquet lectus orci nec velit. Vivamus dapibus varius blandit.
+\lettersection{What I bring}
+In my current role at Homiwoo, I built the production Automated Valuation Model for French residential real estate — an attention-based neural network with built-in interpretability and calibrated uncertainty estimates — along with gradient-boosted energy-rating models and computer-vision research for listing-photo analysis. I own the full ML lifecycle, from problem formulation and feature engineering through architecture, rigorous experimentation, and deployment, and I ship models through a modern MLOps stack (BentoML, MLflow, Optuna, Docker). I care as much about robustness, interpretability, and evaluation as I do about raw model performance.
 
-\lettersection{Why Me?}
-Duis sit amet magna ante, at sodales diam. Aenean consectetur porta risus et sagittis. Ut interdum, enim varius pellentesque tincidunt, magna libero sodales tortor, ut fermentum nunc metus a ante. Vivamus odio leo, tincidunt eu luctus ut, sollicitudin sit amet metus. Nunc sed orci lectus. Ut sodales magna sed velit volutpat sit amet pulvinar diam venenatis.
+\lettersection{Why I am a good fit}
+I combine research depth with a strong engineering mindset: I enjoy translating ambitious ideas into dependable systems that hold up in production, and I communicate results clearly to both technical and non-technical stakeholders. I would welcome the chance to bring this same rigour and ownership to your team, and to contribute to the problems you are solving.
+
+Thank you for considering my application. I would be glad to discuss how my background aligns with your needs, and I have attached my CV for your review.
 
 \end{cvletter}
 
 
 %-------------------------------------------------------------------------------
-% Print the signature and enclosures with above letter informations
 \makeletterclosing
 
 \end{document}

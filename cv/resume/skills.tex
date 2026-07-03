@@ -1,0 +1,38 @@
+%-------------------------------------------------------------------------------
+%	TECHNICAL SKILLS
+%-------------------------------------------------------------------------------
+\cvsection{Technical Skills}
+
+% Narrow the label column so wider category names don't overflow.
+\renewenvironment{cvskills}{%
+  \vspace{\acvSectionContentTopSkip}
+  \vspace{-2.0mm}
+  \begin{center}
+    \setlength\tabcolsep{1ex}
+    \setlength{\extrarowheight}{0pt}
+    \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} r L{\textwidth * \real{0.82}}}
+}{%
+    \end{tabular*}
+  \end{center}
+}
+
+\begin{cvskills}
+  \cvskill
+    {Languages}
+    {Python (Expert), SQL, Java, C/C++}
+  \cvskill
+    {Machine Learning}
+    {Deep Learning, Attention Models, Gradient Boosting (XGBoost, LightGBM, CatBoost), Ensembles, Feature Engineering, Hyperparameter Optimization}
+  \cvskill
+    {Computer Vision}
+    {Object Detection (YOLO), Semantic / Panoptic Segmentation (OneFormer), Monocular Depth (DPT), Feature Matching (LoFTR), CLIP}
+  \cvskill
+    {Frameworks}
+    {PyTorch, PyTorch Lightning, Scikit-learn, XGBoost, TensorFlow}
+  \cvskill
+    {MLOps \& Data}
+    {BentoML, MLflow, Optuna, Docker, DVC, Dagster, Git, NumPy, Pandas, Elasticsearch}
+  \cvskill
+    {Modeling}
+    {Uncertainty / Conformal Prediction, Explainable AI (SHAP, Captum), A/B Evaluation, Time-Series}
+\end{cvskills}

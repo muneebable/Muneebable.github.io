@@ -1,25 +1,36 @@
 %-------------------------------------------------------------------------------
-%	SECTION TITLE
+%	EDUCATION
 %-------------------------------------------------------------------------------
 \cvsection{Education}
 
+% Compact education entry: two tight lines, no empty description row.
+% Usage: \cvedu{<institution>}{<degree>}{<location>}{<date>}
+\newcommand*{\cvedu}[4]{%
+  \vspace{-1.2mm}
+  \setlength\tabcolsep{0pt}
+  \setlength{\extrarowheight}{-1pt}
+  \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} L{\textwidth - 4.5cm} R{4.5cm}}
+    \entrytitlestyle{#2} & \entrylocationstyle{#3} \\[-0.3mm]
+    \entrypositionstyle{#1} & \entrydatestyle{#4} \\
+  \end{tabular*}%
+}
 
-%-------------------------------------------------------------------------------
-%	CONTENT
-%-------------------------------------------------------------------------------
-\begin{cventries}
+\vspace{-1mm}
 
-%---------------------------------------------------------
-  \cventry
-    {B.S. in Computer Science and Engineering} % Degree
-    {POSTECH(Pohang University of Science and Technology)} % Institution
-    {Pohang, S.Korea} % Location
-    {Mar. 2010 - Exp. Aug. 2017} % Date(s)
-    {
-      \begin{cvitems} % Description(s) bullet points
-        \item {Got a Chun Shin-Il Scholarship which is given to promising students in CSE Dept.}
-      \end{cvitems}
-    }
+  \cvedu
+    {ENSIMAG, Grenoble INP}
+    {Master of Informatics (Specialization in Data Science)}
+    {Grenoble, France}
+    {Sept. 2018 - Present}
 
-%---------------------------------------------------------
-\end{cventries}
+  \cvedu
+    {RMIT University}
+    {Master of Computer Science}
+    {Melbourne, Australia}
+    {Jan. 2016 - July 2017}
+
+  \cvedu
+    {NEDUET}
+    {B.E in Computer and Information Systems Engineering}
+    {Karachi, Pakistan}
+    {2011 - 2014}
