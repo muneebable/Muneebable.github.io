@@ -23,7 +23,4 @@ cv/*.bbl
 cv/*.blg
 
 # one source: keep other docs local (in cv/) but do NOT commit them
-cv/resume.tex
-cv/resume/
-cv/coverletter.tex
 cv/cv-rahul/
