@@ -36,7 +36,25 @@ params:
   animate: true
 
   theme:
-    defaultTheme: "dark"
+    defaultTheme: "light"
+
+  # Palette matched to the CV accent (awesome-orange #FF6138)
+  #   Light theme  -> orange + white
+  #   Dark theme   -> orange + black
+  color:
+    primaryColor: "#FF8256"
+    secondaryColor: "#fffcfa"
+    backgroundColor: "#ffffff"
+    textColor: "#23262b"
+    secondaryTextColor: "#6c757d"
+    textLinkColor: "#e6602f"
+    darkmode:
+      primaryColor: "#FF8256"
+      secondaryColor: "#2d2d2d"
+      backgroundColor: "#0f0f0f"
+      textColor: "#f4f4f5"
+      secondaryTextColor: "#a9adb3"
+      textLinkColor: "#ff9d78"
 
   font:
     fontSize: 1rem
@@ -309,7 +327,7 @@ params:
   # Achievements / Publications
   achievements:
     enable: true
-    title: "Publications & Achievements"
+    title: "Publications"
     items:
       - title: "Explaining Visual Classification Using Attributes"
         content: "M. ul Hassan, P. Mulhem, D. Pellerin, G. Quénot. In 2019 International Conference on Content-Based Multimedia Indexing (CBMI), IEEE, 2019."
