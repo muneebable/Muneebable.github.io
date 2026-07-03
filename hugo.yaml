@@ -66,7 +66,8 @@ params:
     title: "Muneeb ul Hassan."
     subtitle: "I build production machine learning systems."
     content: "Data Scientist and ML Engineer with 5+ years of experience designing, building, and deploying production-grade machine learning systems — spanning property valuation, energy-rating estimation, and computer vision."
-    image: /images/hero.svg
+    image: /images/profile.jpg
+    roundImage: true
     bottomImage:
       enable: true
     button:
@@ -90,7 +91,6 @@ params:
   about:
     enable: true
     title: "About Me"
-    image: "/images/profile.jpg"
     content: |-
       I am a Data Scientist at Homiwoo (Paris), where I design, build, and deploy production machine learning systems for the real estate domain — from automated property valuation to energy-rating estimation and computer vision on listing photos.
 
