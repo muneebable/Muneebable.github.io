@@ -105,6 +105,8 @@ params:
           url: https://twitter.com/Muneebable
         - icon: fas fa-graduation-cap
           url: https://scholar.google.com/citations?user=xMl72TkAAAAJ&hl=en
+        - icon: fas fa-blog
+          url: https://neurohive.io/en/author/muneeb/
 
   # About
   about:
@@ -337,6 +339,62 @@ params:
         content: "M. ul Hassan, N. R. Sabar, A. Song. International Conference on Computational Science (ICCS), pp. 528–539, Springer, 2018. (Rank A)"
         url: https://doi.org/10.1007/978-3-319-93701-4_41
         image: /images/papers/iccs2018.jpg
+
+  # Articles (external — deep-learning explainers written for NeuroHive)
+  articles:
+    enable: true
+    title: "Articles"
+    subtitle: "Deep-learning explainers I wrote for NeuroHive"
+    source: "NeuroHive"
+    items:
+      - title: "ResNet (34, 50, 101): Residual CNNs for Image Classification"
+        date: "Jan 2019"
+        content: "How residual networks use skip connections to train very deep CNNs for image classification."
+        url: https://neurohive.io/en/popular-networks/resnet/
+      - title: "R-CNN — Object Detection and Semantic Segmentation"
+        date: "Nov 2018"
+        content: "The region-based CNN family for object detection and segmentation."
+        url: https://neurohive.io/en/popular-networks/r-cnn/
+      - title: "Pix2Pix — Image-to-Image Translation"
+        date: "Nov 2018"
+        content: "Berkeley's conditional GAN for paired image-to-image translation."
+        url: https://neurohive.io/en/popular-networks/pix2pix-image-to-image-translation/
+      - title: "U-Net: Image Segmentation Network"
+        date: "Nov 2018"
+        content: "The encoder–decoder architecture that became a standard for biomedical and general segmentation."
+        url: https://neurohive.io/en/popular-networks/u-net/
+      - title: "VGG16 — Convolutional Network for Classification & Detection"
+        date: "Nov 2018"
+        content: "Oxford's deep, uniform 3×3 convolutional architecture for large-scale recognition."
+        url: https://neurohive.io/en/popular-networks/vgg16/
+      - title: "AlexNet — ImageNet Classification with Deep CNNs"
+        date: "Oct 2018"
+        content: "The network that reignited deep learning by winning ImageNet 2012."
+        url: https://neurohive.io/en/popular-networks/alexnet-imagenet-classification-with-deep-convolutional-neural-networks/
+      - title: "Head Reconstruction from Internet Photos"
+        date: "Oct 2018"
+        content: "Reconstructing 3D head models from unconstrained internet photos across pose and lighting."
+        url: https://neurohive.io/en/computer-vision/head-reconstruction-from-internet-photos/
+      - title: "A Neural Network that Evaluates Natural-Scene Memorability"
+        date: "Oct 2018"
+        content: "Predicting how memorable an image is, inspired by human cognition."
+        url: https://neurohive.io/en/state-of-the-art/natural-scene-memorability/
+      - title: "Temporal Relational Reasoning in Videos"
+        date: "Sep 2018"
+        content: "Reasoning about relations between entities over time for video understanding."
+        url: https://neurohive.io/en/state-of-the-art/temporal-relational-reasoning-in-videos/
+      - title: "Automatic Forensic Facial Reconstruction"
+        date: "Aug 2018"
+        content: "Skull-based facial reconstruction for forensic science and anthropology."
+        url: https://neurohive.io/en/state-of-the-art/method-for-automatic-forensic-facial-reconstruction/
+      - title: "DeepWrinkles: Accurate and Realistic Clothing Modeling"
+        date: "Aug 2018"
+        content: "Learning realistic garment wrinkles for body shape and pose estimation."
+        url: https://neurohive.io/en/state-of-the-art/deepwrinkles-accurate-and-realistic-clothing-modeling/
+      - title: "A Style-Aware Content Loss for Real-time HD Style Transfer"
+        date: "Aug 2018"
+        content: "A content loss that preserves style for high-resolution, real-time style transfer."
+        url: https://neurohive.io/en/state-of-the-art/a-style-aware-content-loss-for-real-time-hd-style-transfer/
 
   # Contact
   contact:

@@ -1,0 +1,29 @@
+{{ if .Site.Params.articles.enable | default false }}
+{{- $articles := .Site.Language.Params.articles | default .Site.Params.articles -}}
+<section id="articles" class="py-5">
+    <div class="container">
+        <h3 class="text-center">{{ $articles.title | default "Articles" }}</h3>
+        {{ with $articles.subtitle }}<p class="text-center articles-subtitle">{{ . }}</p>{{ end }}
+        <div class="px-0 px-md-5 px-lg-5">
+            <div class="row justify-content-center px-3 px-md-5 px-lg-5">
+                {{ range $articles.items | default .Site.Params.articles.items }}
+                <div class="col-lg-4 col-md-6 my-3">
+                    <a class="card article-card my-3 h-100 p-3" href="{{ .url }}" title="{{ .title }}" target="_blank" rel="noopener">
+                        <div class="card-body bg-transparent d-flex flex-column">
+                            {{ with .date }}<span class="article-date">{{ . }}</span>{{ end }}
+                            <h5 class="card-title bg-transparent mt-1">{{ .title }}</h5>
+                            {{ with .content }}
+                            <div class="card-text secondary-font">{{ . }}</div>
+                            {{ end }}
+                            <span class="article-readmore mt-auto pt-3">
+                                Read on {{ $articles.source | default "the web" }} <i class="fas fa-arrow-right fa-xs"></i>
+                            </span>
+                        </div>
+                    </a>
+                </div>
+                {{ end }}
+            </div>
+        </div>
+    </div>
+</section>
+{{ end }}
