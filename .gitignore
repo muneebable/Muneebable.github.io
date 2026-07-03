@@ -9,3 +9,15 @@ hugo.tar.gz
 /public/
 /resources/_gen/
 .hugo_build.lock
+
+# LaTeX build artifacts (CV source lives in cv/)
+cv/*.aux
+cv/*.log
+cv/*.out
+cv/*.pdf
+cv/*.synctex.gz
+cv/*.toc
+cv/*.fls
+cv/*.fdb_latexmk
+cv/*.bbl
+cv/*.blg

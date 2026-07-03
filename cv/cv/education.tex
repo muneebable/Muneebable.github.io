@@ -1,0 +1,43 @@
+%-------------------------------------------------------------------------------
+%	SECTION TITLE
+%-------------------------------------------------------------------------------
+\cvsection{Education}
+
+
+%-------------------------------------------------------------------------------
+%	CONTENT
+%-------------------------------------------------------------------------------
+% Compact education entry: two tight lines, no empty description row.
+% Usage: \cvedu{<institution>}{<degree>}{<location>}{<date>}
+\newcommand*{\cvedu}[4]{%
+  \vspace{-1.2mm}
+  \setlength\tabcolsep{0pt}
+  \setlength{\extrarowheight}{-1pt}
+  \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} L{\textwidth - 4.5cm} R{4.5cm}}
+    \entrytitlestyle{#2} & \entrylocationstyle{#3} \\[-0.3mm]
+    \entrypositionstyle{#1} & \entrydatestyle{#4} \\
+  \end{tabular*}%
+}
+
+\vspace{-1mm}
+
+%---------------------------------------------------------
+  \cvedu
+    {ENSIMAG, Grenoble INP} % Institution
+    {Master of Informatics (Specialization in Data Science)} % Degree
+    {Grenoble, France} % Location
+    {Sept 2018 - Present} % Date(s)
+
+%---------------------------------------------------------
+  \cvedu
+    {RMIT University} % Institution
+    {Master of Computer Science} % Degree
+    {Melbourne, Australia} % Location
+    {Jan 2016 - July 2017} % Date(s)
+
+%---------------------------------------------------------
+  \cvedu
+    {NEDUET} % Institution
+    {B.E in Computer and Information Systems Engineering} % Degree
+    {Karachi, Pakistan} % Location
+    {2011 - 2014} % Date(s)

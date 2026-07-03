@@ -1,0 +1,81 @@
+%-------------------------------------------------------------------------------
+%	SECTION TITLE
+%-------------------------------------------------------------------------------
+\cvsection{Experience}
+
+
+%-------------------------------------------------------------------------------
+%	CONTENT
+%-------------------------------------------------------------------------------
+\begin{cventries}
+
+%---------------------------------------------------------
+  \cventry
+    {HOMIWOO} % Job title
+    {Data Scientist} % Organization
+    {Paris, France} % Location
+    {Sept. 2019 - PRESENT} % Date(s)
+    {
+      \begin{cvitems} % Description(s) of tasks/responsibilities
+        \item {\textbf{Built the production Automated Valuation Model (AVM)} for French residential real estate, an attention-based comparable-sales neural network (PyTorch Lightning) that estimates property price as a learned, attention-weighted aggregate of comparable transactions and listings, with bounded per-comparable price adjustment for built-in interpretability.}
+        \item {\textbf{Designed the uncertainty-estimation layer} using Conformalized Quantile Regression to produce calibrated prediction intervals and a confidence score derived from the model's own internal attention and adjustment signals.}
+        \item {\textbf{Developed the DPE/GES energy-rating estimation service}, gradient-boosted models (XGBoost) predicting energy consumption and greenhouse-gas emissions, with surface-aware conversion to the regulatory A--G class and a custom asymmetric loss to control over/under-prediction bias.}
+        \item {\textbf{Engineered spatial neighbour-based feature pipelines}, using similarity-weighted aggregations (distance, surface, construction year, recency) of nearby properties' known DPE ratings as predictive features for energy-class estimation.}
+        \item {\textbf{Computer-vision research} for real-estate listing-photo analysis, including object detection (YOLOv5), panoptic segmentation (OneFormer), monocular depth (DPT), image-pair matching (LoFTR) and CLIP-based classification toward floor-plan reconstruction from photos.}
+        \item {\textbf{Built and operated the ML infrastructure}, packaging models as BentoML services, tracking experiments and model versions in MLflow, and running notebook-driven experimentation with A/B candidate-vs-reference evaluation and training/serving-skew validation.}
+        \item {\textbf{Owned the full ML lifecycle}, dataset creation, hyperparameter optimization (Optuna), evaluation pipelines, model explainability (SHAP / Captum), and deployment of production models.}
+      \end{cvitems}
+    }
+
+%---------------------------------------------------------
+  \cventry
+    {LIG Lab} % Job title
+    {Deep Learning Research Intern} % Organization
+    {Grenoble, France} % Location
+    {Feb. 2019 - JUNE 2019} % Date(s)
+    {
+      \begin{cvitems} % Description(s) of tasks/responsibilities
+        \item {Worked on Explainable Deep Learning for Multimedia Indexing and Retrieval and conducted a survey on Explainable AI.}
+        \item {Proposed a technique; paper accepted at the CBMI 2019 conference.}
+      \end{cvitems}
+    }
+
+%---------------------------------------------------------
+  \cventry
+    {Fujitsu} % Job title
+    {Software Engineering Intern} % Organization
+    {Augsburg, Germany} % Location
+    {Sept. 2017 - Sept 2018} % Date(s)
+    {
+      \begin{cvitems} % Description(s) of tasks/responsibilities
+        \item {Automated and optimized (TAO) QA server tests for low/mid/high-end Fujitsu servers, implementing new functionality and bug fixes in Java/Python in an Agile (Scrum) environment.}
+      \end{cvitems}
+    }
+
+%---------------------------------------------------------
+  \cventry
+    {RMIT University} % Job title
+    {Machine Learning Research Intern} % Organization
+    {Melbourne, Australia} % Location
+    {Jan. 2017 - June 2017} % Date(s)
+    {
+      \begin{cvitems} % Description(s) of tasks/responsibilities
+        \item {Optimised deep learning hyper-parameters using hyper-heuristics for classification; published a paper at A-rank conference ICCS-2018.}
+      \end{cvitems}
+    }
+
+%---------------------------------------------------------
+  \cventry
+    {CDC House} % Job title
+    {Software Engineer} % Organization
+    {Karachi, Pakistan} % Location
+    {Jan. 2015 - May. 2015} % Date(s)
+    {
+      \begin{cvitems} % Description(s) of tasks/responsibilities
+        \item {Developed new functionalities, fixed bugs, and wrote data queries to enhance the production system per day-to-day requirements.}
+      \end{cvitems}
+    }
+
+
+%---------------------------------------------------------
+\end{cventries}

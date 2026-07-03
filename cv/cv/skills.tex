@@ -1,0 +1,61 @@
+%-------------------------------------------------------------------------------
+%	SECTION TITLE
+%-------------------------------------------------------------------------------
+\cvsection{Technical Skills}
+
+
+%-------------------------------------------------------------------------------
+%	CONTENT
+%-------------------------------------------------------------------------------
+% Narrow the skills column so wider category labels don't overflow the page width.
+\renewenvironment{cvskills}{%
+  \vspace{\acvSectionContentTopSkip}
+  \vspace{-2.0mm}
+  \begin{center}
+    \setlength\tabcolsep{1ex}
+    \setlength{\extrarowheight}{0pt}
+    \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} r L{\textwidth * \real{0.80}}}
+}{%
+    \end{tabular*}
+  \end{center}
+}
+
+\begin{cvskills}
+
+%---------------------------------------------------------
+  \cvskill
+    {Languages} % Category
+    {Python (Expert), SQL, Java, C/C++} % Skills
+
+%---------------------------------------------------------
+  \cvskill
+    {Machine Learning} % Category
+    {Deep Learning, Attention Models, Gradient Boosting (XGBoost, LightGBM, CatBoost), Ensembles, Feature Engineering, Hyperparameter Optimization} % Skills
+
+%---------------------------------------------------------
+  \cvskill
+    {Computer Vision} % Category
+    {Object Detection (YOLO), Semantic / Panoptic Segmentation (OneFormer), Monocular Depth (DPT), Feature Matching (LoFTR), CLIP} % Skills
+
+%---------------------------------------------------------
+  \cvskill
+    {Frameworks} % Category
+    {PyTorch, PyTorch Lightning, Scikit-learn, XGBoost, TensorFlow} % Skills
+
+%---------------------------------------------------------
+  \cvskill
+    {Data} % Category
+    {NumPy, Pandas, Elasticsearch} % Skills
+
+%---------------------------------------------------------
+  \cvskill
+    {MLOps} % Category
+    {BentoML, MLflow, Optuna, Docker, DVC, Dagster, Git} % Skills
+
+%---------------------------------------------------------
+  \cvskill
+    {Modeling} % Category
+    {Uncertainty / Conformal Prediction, Explainable AI (SHAP, Captum), A/B Evaluation, Time-Series} % Skills
+
+%---------------------------------------------------------
+\end{cvskills}
