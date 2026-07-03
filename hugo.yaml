@@ -30,6 +30,7 @@ params:
   title: "Muneeb ul Hassan"
   description: "Data Scientist & Machine Learning Engineer — production ML for the real estate domain."
   favicon: "/fav.png"
+  customCSS: true
   useBootstrapCDN: false
   mathjax: false
   animate: true
@@ -65,7 +66,7 @@ params:
     intro: "Hi, my name is"
     title: "Muneeb ul Hassan."
     subtitle: "I build production machine learning systems."
-    content: "Data Scientist and ML Engineer with 5+ years of experience designing, building, and deploying production-grade machine learning systems — spanning property valuation, energy-rating estimation, and computer vision."
+    content: "Data Scientist and ML Engineer with 7+ years of experience designing, building, and deploying production-grade machine learning systems — spanning property valuation, energy-rating estimation, and computer vision."
     image: /images/profile.jpg
     roundImage: true
     bottomImage:
@@ -96,20 +97,61 @@ params:
 
       I enjoy owning the full ML lifecycle: framing the problem, engineering features, designing and training custom deep-learning and gradient-boosting models, quantifying prediction uncertainty, and shipping reliable, interpretable models to production through a modern MLOps stack.
     skills:
+      enable: false
+      items: []
+    # Custom logo-based tech stack (rendered by layouts/partials/sections/about.html)
+    techStack:
       enable: true
-      title: "A few technologies and tools I work with:"
-      items:
-        - "Python"
-        - "PyTorch / PyTorch Lightning"
-        - "XGBoost / LightGBM"
-        - "Scikit-learn"
-        - "TensorFlow"
-        - "MLflow"
-        - "BentoML"
-        - "Optuna"
-        - "Docker"
-        - "SQL"
-        - "Computer Vision"
+      title: "Technologies & tools I work with:"
+      groups:
+        - name: "Languages"
+          items:
+            - { name: "Python", logo: "/images/logos/tech/python.svg" }
+            - { name: "SQL", icon: "fas fa-database" }
+            - { name: "Java", logo: "/images/logos/tech/openjdk.svg" }
+            - { name: "C / C++", logo: "/images/logos/tech/cplusplus.svg" }
+        - name: "ML & Deep Learning"
+          items:
+            - { name: "PyTorch", logo: "/images/logos/tech/pytorch.svg" }
+            - { name: "PyTorch Lightning", logo: "/images/logos/tech/lightning.svg" }
+            - { name: "TensorFlow", logo: "/images/logos/tech/tensorflow.svg" }
+            - { name: "Keras", logo: "/images/logos/tech/keras.svg" }
+            - { name: "Scikit-learn", logo: "/images/logos/tech/scikitlearn.svg" }
+            - { name: "XGBoost", logo: "/images/logos/tech/xgboost.png" }
+            - { name: "LightGBM", logo: "/images/logos/tech/lightgbm.svg" }
+            - { name: "CatBoost", logo: "/images/logos/tech/catboost.png" }
+            - { name: "OpenCV", logo: "/images/logos/tech/opencv.svg" }
+        - name: "Data"
+          items:
+            - { name: "NumPy", logo: "/images/logos/tech/numpy.svg" }
+            - { name: "Pandas", logo: "/images/logos/tech/pandas.svg" }
+            - { name: "Elasticsearch", logo: "/images/logos/tech/elasticsearch.svg" }
+        - name: "MLOps & Tooling"
+          items:
+            - { name: "BentoML", logo: "/images/logos/tech/bentoml.svg" }
+            - { name: "MLflow", logo: "/images/logos/tech/mlflow.svg" }
+            - { name: "Optuna", logo: "/images/logos/tech/optuna.svg" }
+            - { name: "DVC", logo: "/images/logos/tech/dvc.svg" }
+            - { name: "Dagster", logo: "/images/logos/tech/dagster.png" }
+            - { name: "Docker", logo: "/images/logos/tech/docker.svg" }
+            - { name: "Git", logo: "/images/logos/tech/git.svg" }
+      focusTitle: "Focus areas & methods:"
+      focus:
+        - "Deep Learning"
+        - "Attention Models"
+        - "Gradient Boosting"
+        - "Ensembles"
+        - "Feature Engineering"
+        - "Hyperparameter Optimization"
+        - "Object Detection (YOLO)"
+        - "Semantic / Panoptic Segmentation (OneFormer)"
+        - "Monocular Depth (DPT)"
+        - "Feature Matching (LoFTR)"
+        - "CLIP"
+        - "Uncertainty / Conformal Prediction"
+        - "Explainable AI (SHAP, Captum)"
+        - "A/B Evaluation"
+        - "Time-Series"
 
   # Experience
   experience:
@@ -117,6 +159,7 @@ params:
     items:
       - company: "Homiwoo"
         companyUrl: "https://homiwoo.com"
+        logo: "/images/logos/org/homiwoo.ico"
         jobs:
           - name: "Data Scientist"
             date: "Sept 2019 - Present"
@@ -133,13 +176,17 @@ params:
               - Built and operated the **ML infrastructure** — BentoML services, MLflow tracking/registry, and notebook-driven experimentation with A/B evaluation.
       - company: "LIG Lab"
         companyUrl: "https://www.liglab.fr/"
+        logo: "/images/logos/org/liglab.svg"
         jobs:
           - name: "Deep Learning Research Intern"
             date: "Feb 2019 - June 2019"
             content: |
-              Worked on Explainable Deep Learning for Multimedia Indexing and Retrieval and conducted a survey on Explainable AI. Proposed a technique to justify classification decisions; paper accepted at the CBMI 2019 conference.
+              
+              - Worked on Explainable Deep Learning for Multimedia Indexing and Retrieval and conducted a survey on Explainable AI.
+              - Proposed a technique to justify classification decisions; paper accepted at the CBMI 2019 conference.
       - company: "Fujitsu"
         companyUrl: "https://www.fujitsu.com/"
+        logo: "/images/logos/org/fujitsu.png"
         jobs:
           - name: "Software Engineering Intern"
             date: "Sept 2017 - Sept 2018"
@@ -147,12 +194,14 @@ params:
               Automated and optimized (TAO) QA server tests for low/mid/high-end Fujitsu PRIMERGY servers, implementing new functionality and bug fixes in Java/Python in an Agile (Scrum) environment.
       - company: "RMIT University"
         companyUrl: "https://www.rmit.edu.au/"
+        logo: "/images/logos/org/rmit.png"
         jobs:
           - name: "Machine Learning Research Intern"
             date: "Jan 2017 - June 2017"
             content: |
               Optimised deep-learning hyper-parameters using hyper-heuristics for image classification; published a paper at A-rank conference ICCS-2018.
       - company: "CDC House"
+        logo: "/images/logos/org/cdc.png"
         jobs:
           - name: "Software Engineer"
             date: "Jan 2015 - May 2015"
@@ -165,6 +214,7 @@ params:
     index: false
     items:
       - title: "Master of Informatics (Specialization in Data Science)"
+        logo: "/images/logos/org/ensimag.ico"
         school:
           name: "ENSIMAG, Grenoble INP"
           url: "https://ensimag.grenoble-inp.fr/"
@@ -174,6 +224,7 @@ params:
 
           Master Thesis: Explainable Deep Learning for Multimedia Indexing and Retrieval.
       - title: "Master of Computer Science"
+        logo: "/images/logos/org/rmit.ico"
         school:
           name: "RMIT University"
           url: "https://www.rmit.edu.au/"
@@ -181,6 +232,7 @@ params:
         content: |-
           Data Science, Machine Learning Fundamentals, Predictive Models, Big Data Processing, Master Thesis.
       - title: "B.E. in Computer and Information Systems Engineering"
+        logo: "/images/logos/org/neduet.png"
         school:
           name: "NED University of Engineering and Technology"
           url: "https://www.neduet.edu.pk/"

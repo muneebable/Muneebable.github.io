@@ -2,3 +2,10 @@
 /public/
 /resources/_gen/
 .hugo_build.lock
+
+# local Hugo binary (do not commit)
+/hugo
+hugo.tar.gz
+/public/
+/resources/_gen/
+.hugo_build.lock

@@ -1,0 +1,301 @@
+/*
+ * Custom overrides to SWAP the display styles of the Experience and
+ * Education sections.
+ *
+ * The theme scopes all its styling by section id:
+ *   - TAB styling lives under  #experience ...
+ *   - CARD styling lives under #education ...
+ * Our layout overrides render Education as tabs and Experience as cards,
+ * so we re-scope the theme's rules here: tab rules -> #education, and
+ * card rules -> #experience. (These are NEW selectors the theme does not
+ * define, so load order does not matter.)
+ */
+
+/* ============ Education rendered as TABS (mirrors theme #experience) ============ */
+
+#education h3 {
+    color: var(--text-secondary-color) !important;
+}
+
+#education .experience-container * {
+    background-color: transparent !important;
+}
+
+#education .tab-pane > * {
+    opacity: 0.9;
+}
+
+#education .tab-pane small {
+    opacity: 0.8;
+}
+
+#education .tab-pane ul {
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+
+#education .experience-container .tab-content > .tab-pane p {
+    padding: 1% 0;
+    margin: 0;
+}
+
+#education .experience-container {
+    background-color: var(--secondary-color) !important;
+    border-radius: .75rem;
+    box-shadow: 0px 8px 56px rgb(15 80 100 / 16%);
+}
+
+#education .nav-item .nav-link {
+    color: var(--text-color) !important;
+    border-bottom: 2px solid transparent;
+    border-radius: 0%;
+    transition: none;
+    cursor: pointer;
+}
+
+#education .nav-item .nav-link.active {
+    color: var(--text-color) !important;
+    border-bottom: 2px solid var(--primary-color);
+    opacity: 0.8;
+}
+
+#education .nav-item .nav-link.active:hover {
+    transition: none !important;
+}
+
+#education .nav-item .nav-link:hover {
+    border-bottom: 2px solid var(--primary-color);
+    opacity: 0.8;
+}
+
+#education .experience-container a {
+    opacity: 0.9;
+    display: inline-block;
+    text-decoration: none;
+    color: var(--text-link-color) !important;
+}
+
+#education .experience-container a::after {
+    content: "";
+    display: block;
+    width: 0px;
+    height: 2px;
+    bottom: 0.37em;
+    background-color: var(--primary-color);
+    transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+    opacity: 0.5;
+}
+
+#education .experience-container a:hover::after,
+#education .experience-container a:focus::after,
+#education .experience-container a:active::after {
+    width: 100%;
+}
+
+#education .experience-container .tab-content .tab-pane ul {
+    overflow: hidden;
+    list-style: none;
+    margin-bottom: 0;
+}
+
+#education .experience-container .tab-content .tab-pane ul li {
+    position: relative;
+    margin-bottom: 10px;
+    padding-left: 20px;
+}
+
+#education .experience-container .tab-content .tab-pane ul li::before {
+    content: "▹";
+    color: var(--primary-color);
+    position: absolute;
+    left: 0px;
+}
+
+/* ============ Experience rendered as CARDS (mirrors theme #education) ============ */
+
+#experience .card * {
+    background-color: var(--secondary-color) !important;
+}
+
+#experience .card {
+    border-radius: 1.5rem;
+    box-shadow: 0px 8px 56px rgb(15 80 100 / 16%);
+    border: 2px solid var(--text-secondary-color) !important;
+    transition: box-shadow .2s linear, opacity .2s linear;
+    transition: transform 0.2s;
+}
+
+#experience .card .card-body {
+    border-radius: 1.5rem;
+    padding: 2rem;
+}
+
+@media all and (max-width:768px) {
+    #experience .card .card-body {
+        padding: 2rem 1rem;
+    }
+}
+
+#experience .card:hover {
+    transition: 0.3s;
+    box-shadow: 0 4px 11px rgb(15 80 100 / 16%);
+    border: 2px solid var(--primary-color) !important;
+}
+
+#experience .card .card-body .education-content a {
+    color: var(--text-link-color) !important;
+    text-decoration: none;
+    opacity: 0.9;
+}
+
+#experience .card .card-body > a h5,
+#experience .card .card-body > a h6 {
+    display: inline-block;
+    text-decoration: none;
+    color: var(--text-link-color) !important;
+}
+
+#experience .card .card-body > a h5::after,
+#experience .card .card-body > a h6::after {
+    content: "";
+    display: block;
+    width: 0px;
+    height: 2px;
+    bottom: 0.37em;
+    background-color: var(--primary-color);
+    transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+    opacity: 0.5;
+}
+
+#experience .card .card-body > a h5:hover::after,
+#experience .card .card-body > a h6:hover::after {
+    width: 100%;
+}
+
+/* ============ Tech-stack logo grid (About section) ============ */
+
+#about .tech-stack-title {
+    color: var(--text-secondary-color);
+    font-weight: 600;
+    opacity: 0.95;
+}
+
+#about .tech-group {
+    margin-bottom: 1.1rem;
+}
+
+#about .tech-group-name {
+    display: block;
+    font-size: 0.8rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    opacity: 0.6;
+    margin-bottom: 0.5rem;
+}
+
+#about .tech-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+}
+
+#about .tech-item {
+    width: 52px;
+    height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent !important;
+    padding: 4px;
+    transition: transform 0.18s ease;
+}
+
+#about .tech-item:hover {
+    transform: translateY(-3px);
+}
+
+#about .tech-item img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+#about .tech-item i {
+    font-size: 1.9rem;
+    color: var(--text-color);
+}
+
+#about .focus-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+#about .focus-pill {
+    display: inline-block;
+    padding: 0.28rem 0.7rem;
+    border: 1px solid var(--primary-color);
+    border-radius: 999px;
+    font-size: 0.82rem;
+    opacity: 0.9;
+}
+
+/* ============ Org logos (Experience cards + Education tabs) ============ */
+
+.org-logo {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    flex: 0 0 auto;
+    background: transparent !important;
+    border-radius: 0.5rem;
+    padding: 0;
+    overflow: hidden;
+}
+
+.org-logo img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.org-logo.org-logo-sm {
+    width: 24px;
+    height: 24px;
+    border-radius: 0.4rem;
+    padding: 2px;
+    vertical-align: middle;
+}
+
+.org-monogram {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+    background: var(--primary-color);
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 0.95rem;
+}
+
+.org-logo-sm .org-monogram {
+    font-size: 0.6rem;
+}
+
+/* show org logos as-is (no tile) even under the theme's blanket background rules */
+#experience .card .org-logo,
+#experience .card .org-logo img,
+#education .experience-container .org-logo,
+#education .experience-container .org-logo img {
+    background: transparent !important;
+}
+
+/* monograms keep their colored background even under blanket rules */
+#experience .card .org-monogram,
+#education .experience-container .org-monogram {
+    background: var(--primary-color) !important;
+}
