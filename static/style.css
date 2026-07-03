@@ -365,3 +365,14 @@
     font-weight: 600;
     font-size: 0.85rem;
 }
+
+/* ============ Dedicated Articles page ============ */
+.articles-page {
+    min-height: 100vh;
+    padding-top: 5.5rem !important;
+}
+.articles-back {
+    border: 1px solid var(--primary-color) !important;
+    color: var(--text-color) !important;
+    border-radius: 999px;
+}

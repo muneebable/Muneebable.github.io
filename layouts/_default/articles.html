@@ -1,12 +1,24 @@
-{{ if .Site.Params.articles.enable | default false }}
+{{ define "head" }}
+<meta name="description" content="Articles by {{ .Site.Params.title }}">
+<link rel="stylesheet" href="{{ (printf "%scss/index.css" (.Site.Params.staticPath | default "")) | relURL }}" media="all">
+<link rel="stylesheet" href="{{ (printf "%scss/projects.css" (.Site.Params.staticPath | default "")) | relURL }}" media="all">
+<script defer src="{{ (printf "%sfontawesome-6/all-6.4.2.js" (.Site.Params.staticPath | default "")) | relURL }}"></script>
+{{ end }}
+
+{{ define "title" }}{{ .Title }} — {{ .Site.Title }}{{ end }}
+
+{{ define "main" }}
 {{- $articles := .Site.Language.Params.articles | default .Site.Params.articles -}}
-<section id="articles" class="py-5">
+<section id="articles" class="py-5 articles-page">
     <div class="container">
-        <h3 class="text-center">{{ $articles.title | default "Articles" }}</h3>
+        <div class="text-center pt-3">
+            <a class="btn btn-sm articles-back" href="{{ "/" | relURL }}"><i class="fas fa-arrow-left fa-xs"></i> Back to home</a>
+        </div>
+        <h3 class="text-center mt-3">{{ $articles.title | default "Articles" }}</h3>
         {{ with $articles.subtitle }}<p class="text-center articles-subtitle">{{ . }}</p>{{ end }}
         <div class="px-0 px-md-5 px-lg-5">
             <div class="row justify-content-center px-3 px-md-5 px-lg-5">
-                {{ range first 3 ($articles.items | default .Site.Params.articles.items) }}
+                {{ range $articles.items | default .Site.Params.articles.items }}
                 <div class="col-lg-4 col-md-6 my-3">
                     <a class="card article-card my-3 h-100 p-3" href="{{ .url }}" title="{{ .title }}" target="_blank" rel="noopener">
                         <div class="card-body bg-transparent d-flex flex-column">
@@ -23,13 +35,6 @@
                 </div>
                 {{ end }}
             </div>
-            {{ if gt (len ($articles.items | default .Site.Params.articles.items)) 3 }}
-            <div class="text-center mt-4">
-                <a class="btn" href="{{ "articles/" | relURL }}">
-                    View all {{ len ($articles.items | default .Site.Params.articles.items) }} articles <i class="fas fa-arrow-right fa-xs"></i>
-                </a>
-            </div>
-            {{ end }}
         </div>
     </div>
 </section>
